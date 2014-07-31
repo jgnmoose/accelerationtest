@@ -47,8 +47,8 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    //[self updateShip];
-    [self updateShipWithoutPhysics];
+    [self updateShip];
+    //[self updateShipWithoutPhysics];
 }
 
 -(void)startMotionManager {
@@ -64,7 +64,7 @@
     CMAccelerometerData *data = self.motionManager.accelerometerData;
     
     if (fabs(data.acceleration.x) > 0.2) {
-        [_ship.physicsBody applyImpulse:CGVectorMake(data.acceleration.x, 0)];
+        [_ship.physicsBody applyImpulse:CGVectorMake(10 * data.acceleration.x, 0)];
     }
 }
 
