@@ -1,0 +1,13 @@
+//
+//  GameScene.h
+//  AccelerationTest
+//
+
+//  Copyright (c) 2014 Jeremy Novak. All rights reserved.
+//
+
+#import <SpriteKit/SpriteKit.h>
+
+@interface GameScene : SKScene
+
+@end
